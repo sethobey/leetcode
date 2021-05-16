@@ -3,9 +3,7 @@ class Solution:
         for line in board:
             if self.isValidArray(line) != True: return False
         for i in range(0, len(board)):
-            row = []
-            for index in range(0, len(board)):
-                row.append(board[index][i])
+            row = [board[index][i] for index in range(0, len(board))]
             if self.isValidArray(row) != True: return False
         for m in range(0, 9, 3):
             for n in range(0, 9, 3):
